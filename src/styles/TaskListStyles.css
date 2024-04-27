@@ -1,0 +1,98 @@
+.btn-delete{
+  border-radius: 10px;
+  padding: 10px;
+  border-style: none;
+  cursor: pointer;
+  background: #eb2152;
+  color: aliceblue;
+}
+
+.btn-delete:hover{
+  background: rgba(148, 0, 0, 0.699)
+}
+
+
+.deleted{
+    position: fixed;
+    background: rgba(148, 0, 0, 0.432);
+    color: aliceblue;
+    padding: 1px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 5px 5px 5px #000;
+    animation: fadeOut 5s forwards;
+}
+
+.edit-task{
+    border-radius: 10px;
+    padding: 10px;
+    border-style: none;
+    cursor: pointer;
+    background: #07db22;
+    color: aliceblue;
+    margin-left: 10px;
+}
+.edit-task:hover{
+    background: rgba(1, 189, 26, 0.603)
+}
+
+.notifications-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start; /* Alinea las notificaciones a la izquierda */
+    position: fixed; /* O absolute, dependiendo de cómo quieras posicionar las notificaciones */
+    bottom: 0;
+    right: 0;
+}
+
+.create-task{
+    color: #013143;
+    border-radius: 4px;
+    border-style: none;
+    padding: 5px 10px;
+    background: #b1bcd4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.create-task:hover{
+    background: #a652ce;
+}
+
+.taskList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+    font-size: small;
+    width: 100%;
+}
+
+.taskList .task{
+    max-width: 30vw;
+}
+
+.task{
+    background: #0000003f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+    max-width: 100%; /* Asegura que las tareas no excedan el ancho de su contenedor */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste dentro del contenedor */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

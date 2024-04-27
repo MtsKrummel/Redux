@@ -9,16 +9,21 @@ import './App.css';
 //En resumen, useDispatch se utiliza para enviar acciones al almacén Redux para actualizar el estado global, mientras que useSelector se utiliza para acceder y suscribirse a porciones específicas del estado global para que los componentes puedan reaccionar a cambios en esos datos. 
 // useDispatch: para enviar información al store.
 // useSelector: para obtener información del store.
-import { useDispatch, useSelector } from 'react-redux'
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-
-  const taskState = useSelector(state => state.tasks)
-  console.log(taskState)
   
   return (
     <div className="App">
-      <h1>Hello!</h1>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<TaskList />} />
+            <Route path="/create-task" element={<TaskForm />} />
+            <Route path="/edit-task/:id" element={<TaskForm />} />
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
